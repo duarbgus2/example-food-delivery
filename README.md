@@ -148,18 +148,18 @@ public class History {
 
 
 }
-
+```
 
 주문
 ![image](https://user-images.githubusercontent.com/103273877/211833240-5ba33353-7e59-481d-8c39-b5bd035b58a3.png)
 
 주문 후 history 확인
 ![image](https://user-images.githubusercontent.com/103273877/211833312-0c814326-e263-4fa9-88c1-47c82153365e.png)
-```
+
 
 2. Compensation / Correlation
 
-```
+
 주문 후 storeOrder 확인
 ![image](https://user-images.githubusercontent.com/103273877/211833375-815afc68-651f-471c-9b02-6a120e938ea5.png)
 
@@ -175,7 +175,7 @@ customer의 notifications 확인 (COOK START)
 
 COOK START 코드
 ![image](https://user-images.githubusercontent.com/103273877/211833554-4a068c5c-4621-4233-a1c4-a48a8c57826b.png)
-```
+
 
 ## DDD 의 적용
 
