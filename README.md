@@ -127,40 +127,54 @@
 1. CQRS
 
 ```
+History.java
+
 @Entity
-@Table(name = "Dashboard_table")
+@Table(name="History_table")
 @Data
-public class Dashboard {
+public class History {
 
-    @Id
-    //@GeneratedValue(strategy=GenerationType.AUTO)
-    private Long id;
+        @Id
+        @GeneratedValue(strategy=GenerationType.AUTO)
+        private Long id;
+        private Long orderId;
+        private Long userId;
+        private Long storeId;
+        private Long menuId;
+        private String qty;
+        private String orderStatus;
+        private String storeStatus;
+        private String deliveryStatus;
 
-    private Long storeId;
-    private Long menuId;
-    private String qty;
-    private String orderStatus;
-    private String storeStatus;
-    private String deliveryStatus;
-    private String address;
+
 }
 
+
+주문
+![image](https://user-images.githubusercontent.com/103273877/211833240-5ba33353-7e59-481d-8c39-b5bd035b58a3.png)
+
+주문 후 history 확인
+![image](https://user-images.githubusercontent.com/103273877/211833312-0c814326-e263-4fa9-88c1-47c82153365e.png)
 ```
 
 2. Compensation / Correlation
 
 ```
-cd app
-mvn spring-boot:run
+주문 후 storeOrder 확인
+![image](https://user-images.githubusercontent.com/103273877/211833375-815afc68-651f-471c-9b02-6a120e938ea5.png)
 
-cd pay
-mvn spring-boot:run 
+storeOrder 코드
+![image](https://user-images.githubusercontent.com/103273877/211833601-8f66ebf4-3703-4cc1-bfef-5463cec2f8ab.png)
 
-cd store
-mvn spring-boot:run  
+요리시작으로 상태 변경
+![image](https://user-images.githubusercontent.com/103273877/211833420-009464be-f855-47f8-9a80-cd5c7eb7f1c0.png)
+![image](https://user-images.githubusercontent.com/103273877/211833465-1f8bc466-3c6a-45c3-9565-89a3d0d09006.png)
 
-cd customer
-python policy-handler.py 
+customer의 notifications 확인 (COOK START)
+![image](https://user-images.githubusercontent.com/103273877/211833507-4b1fc441-2c6a-47fb-9a9f-5829abb32252.png)
+
+COOK START 코드
+![image](https://user-images.githubusercontent.com/103273877/211833554-4a068c5c-4621-4233-a1c4-a48a8c57826b.png)
 ```
 
 ## DDD 의 적용
