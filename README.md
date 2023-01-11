@@ -127,17 +127,24 @@
 1. CQRS
 
 ```
-cd app
-mvn spring-boot:run
+@Entity
+@Table(name = "Dashboard_table")
+@Data
+public class Dashboard {
 
-cd pay
-mvn spring-boot:run 
+    @Id
+    //@GeneratedValue(strategy=GenerationType.AUTO)
+    private Long id;
 
-cd store
-mvn spring-boot:run  
+    private Long storeId;
+    private Long menuId;
+    private String qty;
+    private String orderStatus;
+    private String storeStatus;
+    private String deliveryStatus;
+    private String address;
+}
 
-cd customer
-python policy-handler.py 
 ```
 
 2. Compensation / Correlation
