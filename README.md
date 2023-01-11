@@ -120,7 +120,7 @@
 
 
 ## Event Storming 결과
-![image](https://user-images.githubusercontent.com/103273877/211801210-ccf718aa-7d76-4ff5-a9a7-2a70fcc34b84.png)
+![image](https://user-images.githubusercontent.com/103273877/211814406-9141f0c3-e38b-45ec-8a38-fc9a7ff518d7.png)
 
 # 구현:
 
